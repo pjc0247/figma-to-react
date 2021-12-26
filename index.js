@@ -1,6 +1,6 @@
 const ComponentName = {
-  'Text': 'Text',
-  'Image': 'Image',
+  'Text': 'Text',       // 실제 프로젝트에서 사용할 컴포넌트 이름을 대체합니다.
+  'Image': 'Image',     // 예) MuiTypography, MuiImage 등
 };
 const AssetBasePath = '@/assets/';
 
