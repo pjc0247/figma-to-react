@@ -4,6 +4,7 @@ const ComponentName = {
 };
 const AssetBasePath = '@/assets/';
 
+// 피그마 값이 컴포넌트 prop으로 매칭되는 방법을 정의합니다.
 const figmaToProps = (figma) => {
   if (figma.type === 'TEXT') {
     const size = figma.fontSize;
@@ -27,6 +28,9 @@ const figmaToProps = (figma) => {
     };
   }
 };
+
+
+// 여기부터는 특별한 일이 없으면 수정하지 않아도 됩니다.
 const propsToString = (props) => {
   return Object
     .entries(props)
