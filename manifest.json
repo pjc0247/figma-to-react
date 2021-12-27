@@ -1,0 +1,19 @@
+{
+  "name": "Figma2React",
+  "description": "figma to react component",
+  "version": "1.0",
+  "manifest_version": 3,
+  "web_accessible_resources": [
+    {
+      "matches": ["https://*.figma.com/*"],
+      "resources": ["figma_ext.js"]
+    }
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://*.figma.com/*"],
+      "js": ["index.js"]
+    }
+  ],
+  "permissions": ["storage", "activeTab", "scripting"]
+}
