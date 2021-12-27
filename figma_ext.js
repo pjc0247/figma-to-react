@@ -23,8 +23,8 @@ const figmaToProps = (figma) => {
     const size = figma.absoluteRenderBounds;
 
     return {
-      width: size.width,
-      height: size.height,
+      width: Math.floor(size.width),
+      height: Math.floor(size.height),
     };
   }
 };
@@ -52,6 +52,8 @@ const download = async (name, buffer) => {
   const writable = await fileHandle.createWritable();
   await writable.write(buffer);
   await writable.close();
+
+  return fileHandle.name;
 };
 
 const copySelection = async () => {
@@ -65,9 +67,9 @@ const copySelection = async () => {
     navigator.clipboard.writeText(output);
   } else {
     const buffer = await selection.exportAsync({ format: 'SVG' });
-    download(selection.name, buffer);
+    const name = await download(selection.name, buffer);
     
-    const output = `<${ComponentName.Image} source={require('${AssetBasePath}${selection.name}.svg')} ${propsToString(figmaToProps(selection))} />`;
+    const output = `<${ComponentName.Image} source={require('${AssetBasePath}${name}')} ${propsToString(figmaToProps(selection))} />`;
     navigator.clipboard.writeText(output);
   }
 };
