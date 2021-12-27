@@ -13,7 +13,7 @@ figma에서 ctrl+c를 누르면 react코드가 복사됩니다.
 설정 방법
 ----
 이 플러그인은 Text와 Image 두종류의 컴포넌트만을 지원합니다.<br/>
-실제 프로젝트에서 사용하는 컴포넌트, 그리고 해당 컴포넌트의 input에 맞게 코드를 수정 할 필요가 있습니다.
+실제 프로젝트에서 사용하는 Image와 Text 컴포넌트, 그리고 해당 컴포넌트의 input에 맞게 코드를 수정 할 필요가 있습니다.
 
 https://github.com/pjc0247/figma-to-react/blob/main/figma_ext.js#L1-L30
 
