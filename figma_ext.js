@@ -57,6 +57,8 @@ const download = async (name, buffer) => {
 };
 
 const copySelection = async () => {
+  const pageSelection = document.getSelection();
+  if (pageSelection.type === 'Range') return;
   const selection = figma.currentPage.selection[0];
   if (!selection) return;
 
