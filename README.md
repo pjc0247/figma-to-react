@@ -2,9 +2,13 @@
 
 figma에서 ctrl+c를 누르면 react코드가 복사됩니다.
 
+* __텍스트__: 자동으로 텍스트 내용이 포함된 컴포넌트가 복사됩니다.
+
 ```tsx
 <MyText size={16}>Hello Figma!</MyText>
 ```
+
+* __이미지__: 이미지를 자동으로 `export` 합니다. 저장할 때 지정한 이름이 포함된 컴포넌트가 복사됩니다.
 
 ```tsx
 <MyImage source={require("@/assets/icon.svg")} width={32} height={32} />
