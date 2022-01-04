@@ -77,7 +77,7 @@ const copySelection = async () => {
 };
 
 document.addEventListener('keydown', (e) => {
-  if (e.key === 'c' && e.ctrlKey) {
+  if (e.key === 'c' && (e.ctrlKey || e.metaKey)) {
     copySelection();
   }
 });
